@@ -1,7 +1,7 @@
 [workspace]
 resolver = "2"
 
-members = ["libs/config"]
+members = ["libs/config", "libs/expression"]
 
 [workspace.dependencies]
-config = { path = "libs/config" }
+expression = { path = "libs/expression" }
