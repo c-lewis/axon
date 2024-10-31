@@ -1,0 +1,9 @@
+[package]
+name = "engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+expression.workspace = true
+polars = { version = "0.43.1", features = ["csv"] }
+rhai = "1.19.0"

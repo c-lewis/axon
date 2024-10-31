@@ -13,6 +13,15 @@ pub struct DataSource {
     pub(crate) exp: Arc<Expression>,
 }
 
+impl DataSource {
+    pub fn new(feature_name: &str, exp: Expression) -> Self {
+        Self {
+            feature_name: feature_name.to_owned(),
+            exp: Arc::new(exp),
+        }
+    }
+}
+
 #[derive(Clone, Debug, PartialEq)]
 pub enum Expression {
     FilterValue(Filter, Arc<Option<Expression>>),
